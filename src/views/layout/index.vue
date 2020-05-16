@@ -1,6 +1,6 @@
 <template>
   <div>
-    <router-view></router-view>
+      这是layout界面
   </div>
 </template>
 
