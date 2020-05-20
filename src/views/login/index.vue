@@ -43,19 +43,25 @@
           <el-button style="width:100%" type="primary" @click="gologin">登录</el-button>
         </el-form-item>
         <el-form-item>
-          <el-button style="width:100%" type="primary">注册</el-button>
+          <el-button style="width:100%" type="primary" @click="goRegiter">注册</el-button>
         </el-form-item>
       </el-form>
     </div>
     <div class="right">
       <img src="@/assets/login_bg.png" alt />
     </div>
+     <regiter ref="regiterRef"></regiter>
   </div>
+ 
 </template>
 
 <script>
+import regiter from './regiter.vue'
 import {setToken} from '@/iluts/token.js'
 export default {
+  components:{
+    regiter
+  },
   data() {
     return {
       name: 'login',
@@ -111,6 +117,9 @@ export default {
     };
   },
   methods: {
+    goRegiter(){
+      this.$refs.regiterRef.dialogVisible=true;
+    },
     getC() {
       this.codeURL =
         process.env.VUE_APP_BASEURL + "/captcha?type=login&r=" + Math.random();
