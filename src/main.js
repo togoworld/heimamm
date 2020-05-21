@@ -1,6 +1,6 @@
 import Vue from 'vue'  //依赖
 import App from './App.vue' //根组件
-import '@/iluts/request.js'
+import '@/utils/request.js'
 import '@/plugins/element.js'
 import router from '@/router'
 

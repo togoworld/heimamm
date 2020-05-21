@@ -57,7 +57,7 @@
 
 <script>
 import regiter from './regiter.vue'
-import {setToken} from '@/iluts/token.js'
+import {setToken} from '@/utils/token.js'
 export default {
   components:{
     regiter
